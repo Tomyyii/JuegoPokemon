@@ -50,7 +50,15 @@ public class Charmander extends Pokemon implements IAtaquesPokemonTipoFuego,IAta
         return Daño;
     }
 
+    @Override
+    public double lanzallamas(int DefEspRivPokemon) {
+         double Daño=(0.01*1.5*1*90*(((0.2*Nivel+1)*Ataque*90)/(25*DefEspRivPokemon)+2));
+         return Daño;
+    }
 
-
-
+    @Override
+    public double llamarada(int DefEspRivPokemon) {
+        double Daño=(0.01*1.5*1*90*(((0.2*Nivel+1)*Ataque*110)/(25*DefEspRivPokemon)+2));
+        return Daño;
+    }
 }

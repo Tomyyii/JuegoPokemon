@@ -51,5 +51,15 @@ public class Squirtle extends Pokemon implements IAtaquesPokemonAgua,IAtaquesPok
         return Daño;
     }
 
+    @Override
+    public double pistolaAgua(int DefEspRivPokemon) {
+        double Daño=(0.01*1.5*1*100*(((0.2*Nivel+1)*Ataque*40)/(25*DefEspRivPokemon)+2));
+        return Daño;
+    }
 
+    @Override
+    public double hidroBomba(int DefEspRivPokemon) {
+        double Daño=(0.01*1.5*1*90*(((0.2*Nivel+1)*Ataque*110)/(25*DefEspRivPokemon)+2));
+        return Daño;
+    }
 }
