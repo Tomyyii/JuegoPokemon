@@ -1,10 +1,12 @@
 package Model;
 
+//Interfaz para el manejo de los distintos ataques segun su tipo
+
 public interface IAtaquesPokemonComun {
 
 
-    double Arañazo(int DefPokRival);
-    double Placaje(int DefPokRival);
+    double Arañazo(double DefPokRival);
+    double Placaje(double DefPokRival);
 
 
 }

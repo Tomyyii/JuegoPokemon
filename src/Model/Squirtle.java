@@ -2,12 +2,12 @@ package Model;
 
 public class Squirtle extends Pokemon implements IAtaquesPokemonAgua,IAtaquesPokemonComun{
     private int Nivel;
-    private double Ataque;
-    private double Defensa;
-    private double Salud;
-    private double AtaqueEspecial;
-    private double Velocidad;
-    private double DefensaEspecial;
+    private double Ataque=48;
+    private double Defensa=65;
+    private double Salud=44;
+    private double AtaqueEspecial=50;
+    private double Velocidad=43;
+    private double DefensaEspecial=64;
 
 
     public Squirtle(int num_pokedex, String tipo, String temporada, double peso, String nombre, int nivel) {
@@ -22,6 +22,56 @@ public class Squirtle extends Pokemon implements IAtaquesPokemonAgua,IAtaquesPok
     public void setNivel(int nivel) {
         Nivel = nivel;
     }
+
+    public double getAtaque() {
+        return Ataque;
+    }
+
+    public void setAtaque(double ataque) {
+        Ataque = ataque;
+    }
+
+    public double getDefensa() {
+        return Defensa;
+    }
+
+    public void setDefensa(double defensa) {
+        Defensa = defensa;
+    }
+
+    public double getSalud() {
+        return Salud;
+    }
+
+    public void setSalud(double salud) {
+        Salud = salud;
+    }
+
+    public double getAtaqueEspecial() {
+        return AtaqueEspecial;
+    }
+
+    public void setAtaqueEspecial(double ataqueEspecial) {
+        AtaqueEspecial = ataqueEspecial;
+    }
+
+    public double getVelocidad() {
+        return Velocidad;
+    }
+
+    public void setVelocidad(double velocidad) {
+        Velocidad = velocidad;
+    }
+
+    public double getDefensaEspecial() {
+        return DefensaEspecial;
+    }
+
+    public void setDefensaEspecial(double defensaEspecial) {
+        DefensaEspecial = defensaEspecial;
+    }
+
+    //Se inicializan las stats de acuerdo al nivel del pokemon, por cada nivel se incrementa un 5% de sus stats anteriores
 
     @Override
     public void SetSTATS(int Nivel1) {
@@ -38,27 +88,29 @@ public class Squirtle extends Pokemon implements IAtaquesPokemonAgua,IAtaquesPok
         Nivel=Nivel1;
     }
 
+
+    //Implementacion de metodos de la interfaz IAtaquesPokemonComun e IAtaquesPokemonAgua
     @Override
-    public double Arañazo(int DefPokRival) {
+    public double Arañazo(double DefPokRival) {
         double Daño=(0.01*1*1*85*(((0.2*Nivel+1)*Ataque*56)/(25*DefPokRival)+2));
         return Daño;
     }
 
     @Override
-    public double Placaje(int DefPokRival)
+    public double Placaje(double DefPokRival)
     {
         double Daño=(0.01*1*1*90*(((0.2*Nivel+1)*Ataque*56)/(25*DefPokRival)+2));
         return Daño;
     }
 
     @Override
-    public double pistolaAgua(int DefEspRivPokemon) {
+    public double pistolaAgua(double DefEspRivPokemon) {
         double Daño=(0.01*1.5*1*100*(((0.2*Nivel+1)*Ataque*40)/(25*DefEspRivPokemon)+2));
         return Daño;
     }
 
     @Override
-    public double hidroBomba(int DefEspRivPokemon) {
+    public double hidroBomba(double DefEspRivPokemon) {
         double Daño=(0.01*1.5*1*90*(((0.2*Nivel+1)*Ataque*110)/(25*DefEspRivPokemon)+2));
         return Daño;
     }

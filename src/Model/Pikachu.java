@@ -26,6 +26,56 @@ public class Pikachu extends Pokemon implements IAtaquesPokemonElectrico,IAtaque
         Nivel = nivel;
     }
 
+    public double getAtaque() {
+        return Ataque;
+    }
+
+    public void setAtaque(double ataque) {
+        Ataque = ataque;
+    }
+
+    public double getDefensa() {
+        return Defensa;
+    }
+
+    public void setDefensa(double defensa) {
+        Defensa = defensa;
+    }
+
+    public double getSalud() {
+        return Salud;
+    }
+
+    public void setSalud(double salud) {
+        Salud = salud;
+    }
+
+    public double getAtaqueEspecial() {
+        return AtaqueEspecial;
+    }
+
+    public void setAtaqueEspecial(double ataqueEspecial) {
+        AtaqueEspecial = ataqueEspecial;
+    }
+
+    public double getVelocidad() {
+        return Velocidad;
+    }
+
+    public void setVelocidad(double velocidad) {
+        Velocidad = velocidad;
+    }
+
+    public double getDefensaEspecial() {
+        return DefensaEspecial;
+    }
+
+    public void setDefensaEspecial(double defensaEspecial) {
+        DefensaEspecial = defensaEspecial;
+    }
+
+
+    //Se inicializan las stats de acuerdo al nivel del pokemon, por cada nivel se incrementa un 5% de sus stats anteriores
     @Override
     public void SetSTATS(int Nivel1) {
         int i=0;
@@ -42,27 +92,28 @@ public class Pikachu extends Pokemon implements IAtaquesPokemonElectrico,IAtaque
     }
 
 
+    //Implementacion de metodos de la interfaz IAtaquesPokemonComun e IAtaquesPokemonElectrico
+
     @Override
-    public double Arañazo(int DefPokRival) {
+    public double Arañazo(double DefPokRival) {
         double Daño=(0.01*1*1*85*(((0.2*Nivel+1)*Ataque*56)/(25*DefPokRival)+2));
         return Daño;
     }
 
     @Override
-    public double Placaje(int DefPokRival)
+    public double Placaje(double DefPokRival)
     {
-        double Daño=(0.01*1*1*90*(((0.2*Nivel+1)*Ataque*56)/(25*DefPokRival)+2));
-        return Daño;
+        return (0.01*1*1*90*(((0.2*Nivel+1)*Ataque*56)/(25*DefPokRival)+2));
     }
 
     @Override
-    public double impacTrueno(int DefEspRivPokemon) {
+    public double impacTrueno(double DefEspRivPokemon) {
         double Daño=(0.01*1.5*1*90*(((0.2*Nivel+1)*AtaqueEspecial*40)/(25*DefEspRivPokemon)+2));
         return Daño;
     }
 
     @Override
-    public double rayo(int DefEspRivPokemon) {
+    public double rayo(double DefEspRivPokemon) {
         double Daño=(0.01*1.5*1*90*(((0.2*Nivel+1)*AtaqueEspecial*90)/(25*DefEspRivPokemon)+2));
         return Daño;
     }

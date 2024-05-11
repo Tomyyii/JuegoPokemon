@@ -1,10 +1,11 @@
 package Model;
 
+//Interfaz para el manejo de los distintos ataques segun su tipo
 public interface IAtaquesPokemonElectrico {
 
-    double impacTrueno(int DefEspRivPokemon);
+    double impacTrueno(double DefEspRivPokemon);
 
-    double rayo(int DefEspRivPokemon);
+    double rayo(double DefEspRivPokemon);
 
 
 }

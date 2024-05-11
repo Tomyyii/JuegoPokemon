@@ -1,6 +1,8 @@
 package Model;
 import java.lang.String;
 
+
+//Clase envoltorio para el manejo de los pokemons, se deja abierto la posibilidad de la implementacion de una futura pokedex con el atributo Num_pokedex
 public abstract class Pokemon {
     protected int Num_pokedex;
     protected String Tipo;

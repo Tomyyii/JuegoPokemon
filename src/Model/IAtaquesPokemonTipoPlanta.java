@@ -1,8 +1,9 @@
 package Model;
 
+//Interfaz para el manejo de los distintos ataques segun su tipo
 public interface IAtaquesPokemonTipoPlanta {
 
-    double rayoSolar(int DefEspRivPokemon);
-    double danzaPetalo(int DefEspRivPokemon);
+    double rayoSolar(double DefEspRivPokemon);
+    double danzaPetalo(double DefEspRivPokemon);
 
 }
